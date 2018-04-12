@@ -1,0 +1,1 @@
+# halasson_client_app
