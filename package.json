@@ -16,10 +16,15 @@
   ],
   "main": "main.js",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/halassonn/halasson_client_app.git"
+  },
   "scripts": {
     "postinstall": "npx electron-builder install-app-deps",
     "ng": "ng",
-    "start": "node hooks/environments/set_profile.js && npm-run-all -p ng:serve electron:serve",
+    "start": "npm-run-all -p electron:serve",
+    "start1": "node hooks/environments/set_profile.js && npm-run-all -p ng:serve electron:serve",
     "build": "node hooks/environments/set_profile.js && ng build && npm run electron:tsc",
     "build:prod": "node hooks/environments/set_profile.js && ng build --prod && npm run electron:tsc",
     "ng:serve": "ng serve -o",
@@ -69,7 +74,7 @@
     "core-js": "2.4.1",
     "cross-env": "5.0.5",
     "dotenv": "5.0.0",
-    "electron": "1.8.2",
+    "electron": "~1.8.2",
     "electron-builder": "20.0.5",
     "electron-reload": "1.2.2",
     "enhanced-resolve": "3.3.0",
